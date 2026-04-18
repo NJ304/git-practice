@@ -1,2 +1,2 @@
-sample text added more content to first line
+text added more content to first line and added more content
 added new line
