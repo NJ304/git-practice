@@ -31,3 +31,12 @@ jobs:
 
       - name: List files
         run: ls -la  
+
+      - name: Run Laravel commands (if exists)
+        run: |
+          if [ -f artisan ]; then
+            php artisan --version
+          else
+            echo "No Laravel project found"
+          fi  
+
