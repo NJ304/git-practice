@@ -42,4 +42,11 @@ jobs:
 
           #- name: Deploy locally (simulation)
           #        run: bash deploy.sh
+      - name: Simulate server clone
+        run: |
+          mkdir server
+          cd server
+          git clone https://github.com/NJ304/git-practice.git
+          cd git-practice
+          git pull origin main
 
