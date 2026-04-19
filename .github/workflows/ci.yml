@@ -1,4 +1,4 @@
-name: My First CI
+name: Laravel CI
 
 on:
   push:
@@ -13,14 +13,16 @@ jobs:
       - name: checkout code
         uses:  actions/checkout@v3     
 
-      - name: Show Current Dir
-        run:  pwd
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+
+      - name: Check PHP version
+        run: php -v
+
+      - name: Install Composer dependencies
+        run: composer install
 
       - name: List files
-        run: ls -la
-
-      - name: simulate install
-        run: echo "Installing dependencies..."   
-
-      - name: simulate test
-        run: echo "running tests..."  
+        run: ls -la  
