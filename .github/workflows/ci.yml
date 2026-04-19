@@ -10,11 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: checkout code
+        run:  actions/checkout@v3     
+
       - name: Show Current Dir
         run:  pwd
 
       - name: List files
         run: ls -la
 
-      - name: print message
-        run: echo "CI/CD is working"  
+      - name: simulate install
+        run: "Installing dependencies..."   
+
+      - name: simulate test
+        run: echo "running tests..."  
