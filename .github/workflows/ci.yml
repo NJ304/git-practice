@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Show Current Dir
-        run: echo "pwd"
+        run:  pwd
 
       - name: List files
       - run: ls -la
