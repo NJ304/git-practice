@@ -22,7 +22,12 @@ jobs:
         run: php -v
 
       - name: Install Composer dependencies
-        run: composer install
+        run: |
+          if [ -f composer.json ]; then
+            composer install
+          else
+            echo "No composer.json found"
+          fi
 
       - name: List files
         run: ls -la  
