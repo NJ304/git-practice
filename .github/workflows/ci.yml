@@ -40,3 +40,6 @@ jobs:
             echo "No Laravel project found"
           fi  
 
+     - name: Deploy locally (simulation)
+        run: bash deploy.sh
+
