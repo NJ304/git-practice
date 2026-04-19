@@ -20,7 +20,7 @@ jobs:
         run: ls -la
 
       - name: simulate install
-        run: Installing dependencies...   
+        run: echo "Installing dependencies..."   
 
       - name: simulate test
         run: echo "running tests..."  
