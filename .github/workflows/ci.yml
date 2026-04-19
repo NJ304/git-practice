@@ -10,5 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
-        run: echo "CI/CD is working"
+      - name: Show Current Dir
+        run: echo "pwd"
+
+      - name: List files
+      - run: ls -la
+
+      - name: print message
+      - run: echo "CI/CD is working"  
